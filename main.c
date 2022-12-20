@@ -3,22 +3,22 @@
 
 int main() {
     setlocale(LC_ALL, "");
-    // Ввод размера матрицы
+
     int n = -1;
     while(n < 0) {
-        printf("Введите размер матрицы n x n: ");
+        printf("Enter matrix size n x n: ");
         scanf("%d", &n);
     }
-    // Ввод матрицы
+
     int matrix[n][n];
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < n; j++) {
-            printf("Введите элемент матрицы matrix[%d][%d]: ", i, j);
+            printf("Enter value of matrix[%d][%d]: ", i, j);
             scanf("%d", &matrix[i][j]);
         }
     }
-    // Вывод матрицы
-    printf("Ваша матрица:\n");
+
+    printf("Your matrix:\n");
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < n; j++) {
             printf("%d ", matrix[i][j]);
@@ -26,7 +26,6 @@ int main() {
         printf("\n");
     }
 
-    // Поиск минимального и максимального элементов столбцов 2 и 4 секторов матрицы
     int vector[n];
     for(int j = 0; j < n; j++) {
         int min = 2147483647;
@@ -44,8 +43,8 @@ int main() {
 
         vector[j] = min + max;
     }
-    // Вывод вектора
-    printf("Ваш вектор:\n");
+
+    printf("Your vector:\n");
     for(int i = 0; i < n; i++) {
         printf("%d ", vector[i]);
     }
